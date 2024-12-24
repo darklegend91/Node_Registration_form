@@ -11,7 +11,7 @@
         overflow: hidden;
       }
       body {
-        background: #f6f5f7;
+        background: url(https://images.pexels.com/photos/24285680/pexels-photo-24285680/free-photo-of-black-wrinkled-paper-texture-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -26,6 +26,7 @@
       }
       h2 {
         text-align: center;
+        color: #eee;
       }
       p {
         font-size: 14px;
@@ -63,7 +64,7 @@
       }
       button.ghost {
         background-color: transparent;
-        border-color: #ffffff;
+        border-color: #000000;
       }
       form {
         background-color: #ffffff;
@@ -146,9 +147,12 @@
         transform: translateX(-100%);
       }
       .overlay {
-        background: #ff416c;
-        background: -webkit-linear-gradient(to right,#452c63,#452c63);
-        background: linear-gradient(to right, #452c63,#452c63 );
+        background: rgb(108, 61, 149);
+        background: radial-gradient(
+          circle,
+          rgba(108, 61, 149, 1) 0%,
+          rgba(205, 116, 216, 1) 100%
+        );
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 0 0;
@@ -257,7 +261,7 @@
     <h2>Registration and Signup Page Made using HTML CSS and Node JS</h2>
     <div class="container" id="container">
       <!-- Sign Up Form -->
-      <div class="form-container sign-up-container">
+      <div class="form-container sign-up-container" style="color: #452c63;">
         <form id="signupForm">
           <h1>Create Account</h1>
           <span>Fill your data for registration</span>
@@ -278,9 +282,10 @@
               width: 100%;
               background-color: #eee;
             "
-          >
-            <input type="radio" name="gender" value="male" required />Male
-            <input type="radio" name="gender" value="female" required />Female
+          ><div style="margin-left: 10px; color: rgb(110, 110, 110); font-size: small;">
+              Gender<input type="radio" name="gender" value="male" required style="width: 30px; margin-left:10px"/>Male
+                <input type="radio" name="gender" value="female" required  style="width: 50px;"/>Female
+          </div>
           </div>
           <input
             type="password"
@@ -300,7 +305,7 @@
       </div>
 
       <!-- Sign In Form -->
-      <div class="form-container sign-in-container">
+      <div class="form-container sign-in-container" style="color: #452c63;">
         <form id="signinForm">
           <h1>Sign in</h1>
           <span>Use your User Name for displaying data</span>
@@ -318,12 +323,12 @@
       <!-- Overlay Panel for the Forms -->
       <div class="overlay-container">
         <div class="overlay">
-          <div class="overlay-panel overlay-left">
+          <div class="overlay-panel overlay-left" style="color: #000000;">
             <h1>Welcome Back!</h1>
             <p>
               To keep connected with us please login with your personal info
             </p>
-            <button class="ghost" id="signIn" >Sign In</button>
+            <button class="ghost" id="signIn" style="color: #000000;">Sign In</button>
           </div>
           <div class="overlay-panel overlay-right">
             <h1>Hello, Friend!</h1>
